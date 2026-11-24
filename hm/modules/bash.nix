@@ -10,7 +10,7 @@
           else
             PS1="(dev) \W \$ "
           fi
-        elif [[ "$PATH" == *"/nix/store/"* ]]; then
+        elif [ "$(echo "$PATH" | tr ':' '\n' | grep -c '^/nix/store/.*/bin$')" -gt "$( [ -n "$NVIM" ] && echo 1 || echo 0 )" ]; then
           PS1="(shell) \W \$ "
         else
           PS1="\W \$ "
