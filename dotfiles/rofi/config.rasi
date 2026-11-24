@@ -1,0 +1,15 @@
+
+//@theme "/usr/share/rofi/themes/fullscreen-preview.rasi"
+
+//@theme "/usr/share/rofi/themes/Monokai.rasi"
+
+//@theme "/usr/share/rofi/themes/Arc-Dark.rasi"
+
+@theme "/home/caylann/.config/rofi/themes/custom.rasi"
+
+configuration {
+    show-icons: false;
+    terminal: "alacritty";
+    font: "Terminess Nerd Font Bold 16";
+    modi: "drun,run,books:~/nixos/dotfiles/rofi/bin/rofi-books.sh";
+}
