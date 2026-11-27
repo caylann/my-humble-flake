@@ -9,6 +9,9 @@ static const char unknown_str[] = "n/a";
 /* maximum output string length */
 #define MAXLEN 2048
 
+/* amneziawg.c */
+const char *amneziawg_status(const char *interface);
+
 /*
  * function            description                     argument (example)
  *
@@ -65,9 +68,10 @@ static const char unknown_str[] = "n/a";
  * wifi_perc           WiFi signal in percent          interface name (wlan0)
  */
 static const struct arg args[] = {
-	/* function      format         argument */
-	{ cpu_perc,      "|  %3s%% ",   NULL },
-	{ ram_perc,      "  %3s%% ",     NULL },
-  { keymap,        "| %s ",        NULL,  0 },
-	{ datetime,      "%s",          "| %F %T" },
+	/* function          format         argument */
+	{ amneziawg_status,  "│ awg:%s │", "warp" },
+  { cpu_perc,          "  %3s%% ",  NULL },
+	{ ram_perc,          "  %3s%% ",   NULL },
+  { keymap,            "│ %s ",       NULL,  0 },
+	{ datetime,          "%s",          "│ %F %T" },
 };

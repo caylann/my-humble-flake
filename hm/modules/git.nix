@@ -1,8 +1,4 @@
-{ pkgs, ... }:
-
 {
-  home.packages = [ pkgs.git-credential-oauth ];
-
   programs.git = {
     enable = true;
     settings = {
@@ -10,11 +6,12 @@
         name = "caylann";
         email = "maxim.sawch@gmail.com";
       };
-
-      credential.helper = [
-        "cache --timeout 86400"
-        "oauth"
-      ];
+    };
+  };
+  programs.gh = {
+    enable = true;
+    gitCredentialHelper = {
+      enable = true;
     };
   };
 }

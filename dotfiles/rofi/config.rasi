@@ -12,4 +12,6 @@ configuration {
     terminal: "alacritty";
     font: "Terminess Nerd Font Bold 16";
     modi: "drun,run,books:~/nixos/dotfiles/rofi/bin/rofi-books.sh";
+    run-shell-command: "{terminal} -e $SHELL -ic '{cmd}'";
+    drun-use-desktop-cache: false;
 }

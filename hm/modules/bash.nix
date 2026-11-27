@@ -2,6 +2,13 @@
   programs.bash = {
     enable = true;
 
+    shellAliases = {
+      v = "nvim";
+
+      awgu = "sudo awg-quick up warp";
+      awgd = "sudo awg-quick down warp";
+    };
+
     initExtra = ''
       set_prompt() {
         if [ -n "$IN_NIX_SHELL" ]; then

@@ -1,6 +1,12 @@
-{ pkgs, user, ... }:
+{
+  pkgs,
+  user,
+  ...
+}:
 
 {
+  services.displayManager.ly.enable = true;
+
   services.xserver = {
     enable = true;
     displayManager.startx.enable = true;
@@ -18,12 +24,12 @@
       Option "OffTime" "0"
       Option "DPMS" "false"
     '';
-    
+
     xkb = {
       layout = "us,ru";
       options = "grp:alt_shift_toggle";
     };
-   
+
     windowManager.dwm = {
       enable = true;
       package = pkgs.dwm.overrideAttrs (oldAttrs: {
@@ -34,11 +40,15 @@
     displayManager = {
       sessionCommands = ''
         ${pkgs.xrandr}/bin/xrandr --output HDMI-A-0 --mode 1920x1080 --rate 60 --primary --set "Broadcast RGB" "Full" &
-    	  ${pkgs.feh}/bin/feh --bg-fill /home/${user}/nixos/dotfiles/assets/plane1.jpg &
-    	  ${pkgs.xset}/bin/xset s off &
-    	  ${pkgs.xset}/bin/xset s noblank &
-    	  ${pkgs.xset}/bin/xset -dpms &
-        ${pkgs.slstatus.overrideAttrs (oldAttrs: { src = ../dotfiles/slstatus; })}/bin/slstatus &
+        ${pkgs.feh}/bin/feh --bg-fill /home/${user}/nixos/dotfiles/assets/plane1.jpg &
+        ${pkgs.xset}/bin/xset s off &
+        ${pkgs.xset}/bin/xset s noblank &
+        ${pkgs.xset}/bin/xset -dpms &
+        ${
+          pkgs.slstatus.overrideAttrs (oldAttrs: {
+            src = ../dotfiles/slstatus;
+          })
+        }/bin/slstatus &
         ${pkgs.picom}/bin/picom -b &
         ${pkgs.dunst}/bin/dunst &
       '';

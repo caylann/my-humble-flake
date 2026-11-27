@@ -1,29 +1,21 @@
-{ config, pkgs, user, ... }:
+{ config, user, ... }:
 
 {
   xdg.configFile = {
-    "nvim".source =
-      config.lib.file.mkOutOfStoreSymlink "/home/${user}/nixos/dotfiles/nvim";
+    "nvim".source = config.lib.file.mkOutOfStoreSymlink "/home/${user}/nixos/dotfiles/nvim";
 
-    "alacritty".source =
-      config.lib.file.mkOutOfStoreSymlink "/home/${user}/nixos/dotfiles/alacritty";
+    "alacritty".source = config.lib.file.mkOutOfStoreSymlink "/home/${user}/nixos/dotfiles/alacritty";
 
-    "fastfetch".source =
-      config.lib.file.mkOutOfStoreSymlink "/home/${user}/nixos/dotfiles/fastfetch";
-      
-    "rofi".source =
-      config.lib.file.mkOutOfStoreSymlink "/home/${user}/nixos/dotfiles/rofi";
+    "fastfetch".source = config.lib.file.mkOutOfStoreSymlink "/home/${user}/nixos/dotfiles/fastfetch";
 
-    "dunst".source =
-      config.lib.file.mkOutOfStoreSymlink "/home/${user}/nixos/dotfiles/dunst";
+    "rofi".source = config.lib.file.mkOutOfStoreSymlink "/home/${user}/nixos/dotfiles/rofi";
 
-    "flameshot".source =
-      config.lib.file.mkOutOfStoreSymlink "/home/${user}/nixos/dotfiles/flameshot";
+    "dunst".source = config.lib.file.mkOutOfStoreSymlink "/home/${user}/nixos/dotfiles/dunst";
 
-    "picom".source =
-      config.lib.file.mkOutOfStoreSymlink "/home/${user}/nixos/dotfiles/picom";
+    "flameshot".source = config.lib.file.mkOutOfStoreSymlink "/home/${user}/nixos/dotfiles/flameshot";
 
-    "ranger".source =
-      config.lib.file.mkOutOfStoreSymlink "/home/${user}/nixos/dotfiles/ranger";
+    "picom".source = config.lib.file.mkOutOfStoreSymlink "/home/${user}/nixos/dotfiles/picom";
+
+    "ranger".source = config.lib.file.mkOutOfStoreSymlink "/home/${user}/nixos/dotfiles/ranger";
   };
 }
