@@ -19,41 +19,6 @@
       };
     };
 
-    desktopEntries = {
-      nvim = {
-        name = "Neovim";
-        genericName = "Text Editor";
-        exec = "nvim %F";
-        icon = "nvim";
-        terminal = true;
-        categories = [ "Utility" "TextEditor" ];
-        mimeType = [
-          "text/english"
-          "text/plain"
-          "text/x-makefile"
-          "text/x-c++hdr"
-          "text/x-c++src"
-          "text/x-chdr"
-          "text/x-csrc"
-          "text/x-java"
-          "text/x-moc"
-          "text/x-pascal"
-          "text/x-tcl"
-          "text/x-tex"
-          "application/x-shellscript"
-          "text/x-c"
-          "text/x-c++"
-        ];
-      };
-      steam = {
-        name = "Steam";
-        genericName = "Game Launcher";
-        exec = "steam";
-        icon = "steam";
-        terminal = false;
-      };
-    };
-
     dataFile = {
       "applications/rofi.desktop".text = ''
         [Desktop Entry]
@@ -119,6 +84,12 @@
         [Desktop Entry]
         Type=Application
         Name=Kvantum Manager
+        NoDisplay=true
+      '';
+      "applications/nvim.desktop".text = ''
+        [Desktop Entry]
+        Type=Application
+        Name=Neovim wrapper
         NoDisplay=true
       '';
     };

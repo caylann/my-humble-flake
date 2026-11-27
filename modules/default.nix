@@ -1,16 +1,16 @@
 {
   imports = [
-    ./nh.nix
-    ./user.nix
-    ./dwm.nix
-    ./stylix.nix
     ./audio.nix
-    ./hardware.nix
     ./boot.nix
-    ./environment.nix
+    ./dwm.nix
+    ./env.nix
     ./flatpak.nix
-    ./networking.nix
+    ./hw.nix
+    ./net.nix
+    ./nh.nix
     ./steam.nix
+    ./stylix.nix
+    ./user.nix
     ./xdg.nix
   ];
 }

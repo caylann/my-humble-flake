@@ -12,9 +12,10 @@
     ];
 
     systemPackages = with pkgs; [
-      linuxPackages_latest.amneziawg
       amneziawg-go
       amneziawg-tools
+      gcc
+      linuxPackages_latest.amneziawg
     ];
 
     defaultPackages = [ ];

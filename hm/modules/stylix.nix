@@ -5,18 +5,11 @@
     nerd-fonts.terminess-ttf
   ];
 
-  home.pointerCursor = {
-    x11 = {
-      enable = true;
-      defaultCursor = "left_ptr";
-    };
-  };
-
   stylix = {
     enable = true;
-    
+
     targets = {
-      gtk ={
+      gtk = {
         extraCss = ''
           decoration,
           window,

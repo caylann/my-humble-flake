@@ -17,5 +17,7 @@
     "picom".source = config.lib.file.mkOutOfStoreSymlink "/home/${user}/nixos/dotfiles/picom";
 
     "ranger".source = config.lib.file.mkOutOfStoreSymlink "/home/${user}/nixos/dotfiles/ranger";
+
+    "polybar".source = config.lib.file.mkOutOfStoreSymlink "/home/${user}/nixos/dotfiles/polybar";
   };
 }

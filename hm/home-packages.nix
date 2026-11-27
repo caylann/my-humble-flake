@@ -4,34 +4,43 @@
   home.packages = with pkgs; [
 
     # Desktop apps
-    librewolf
-    obsidian
-    telegram-desktop
-    vesktop
+    anki
+    imv
     kdePackages.okular
     libreoffice
+    librewolf
+    mpv
+    obsidian
     obs-studio
-    vlc
+    qalculate-gtk
+    telegram-desktop
+    vesktop
 
     # Software I use
     alacritty
-    rofi-unwrapped
     flameshot
     ranger
+    rofi-unwrapped
 
     # CLI utils
     fastfetch
-    htop
-    ueberzugpp
-    xsel
     fzf
+    htop
+    mediainfo
     ntfs3g
+    playerctl
     ripgrep
+    udisks
+    ueberzugpp
     unzip
+    w3m
+    wget
+    xsel
+    yt-dlp
+    zip
 
     # For Neovim
     neovim
-    gcc
     tree-sitter
     clang-tools
     lua-language-server

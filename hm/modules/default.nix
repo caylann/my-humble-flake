@@ -1,9 +1,10 @@
 {
   imports = [
-    ./dotfiles_symlinks.nix
-    ./git.nix
     ./bash.nix
-    ./xdg.nix
+    ./git.nix
+    ./dotfiles_symlinks.nix
+    ./polybar.nix
     ./stylix.nix
+    ./xdg.nix
   ];
 }

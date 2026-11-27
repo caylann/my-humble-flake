@@ -44,11 +44,7 @@
         ${pkgs.xset}/bin/xset s off &
         ${pkgs.xset}/bin/xset s noblank &
         ${pkgs.xset}/bin/xset -dpms &
-        ${
-          pkgs.slstatus.overrideAttrs (oldAttrs: {
-            src = ../dotfiles/slstatus;
-          })
-        }/bin/slstatus &
+        ${pkgs.polybarFull}/bin/polybar &
         ${pkgs.picom}/bin/picom -b &
         ${pkgs.dunst}/bin/dunst &
       '';
