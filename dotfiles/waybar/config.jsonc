@@ -1,0 +1,119 @@
+{
+    "layer": "top",
+    "position": "bottom",
+    "height": 30,
+    "margin-top": 0,
+    "margin-bottom": 5,
+    "margin-left": 333,
+    "margin-right": 333,
+    "spacing": 0,
+
+    "modules-left": [
+        "custom/nixos",
+        "custom/sep",
+        "sway/workspaces",
+        "sway/mode",
+        "sway/window"
+    ],
+    "modules-center": [],
+    "modules-right": [
+        "tray",
+        "custom/bypass",
+        "custom/sep",
+        "pulseaudio",
+        "custom/sep",
+        "sway/language",
+        "custom/sep",
+        "memory",
+        "custom/sep",
+        "cpu",
+        "custom/sep",
+        "clock"
+    ],
+
+    "custom/sep": {
+        "format": "|",
+        "tooltip": false
+    },
+
+    // --- Left Modules ---
+    "custom/nixos": {
+        "format": "",
+        "tooltip": false,
+        "on-click": "rofi -show drun"
+    },
+
+    "sway/workspaces": {
+        "disable-scroll": false,
+        "wrap-scroll": true,
+        "all-outputs": false,
+        "format": "{name}",
+        "persistent-workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": [],
+            "6": []
+        }
+    },
+
+    "sway/mode": {
+        "format": "{}",
+        "tooltip": false
+    },
+
+    "sway/window": {
+        "format": " <span color='#707880'>|</span> {app_id}{class}",
+        "max-length": 30,
+        "rewrite": {
+            " <span color='#707880'>|</span> ": ""
+        }
+    },
+
+    // --- Right Modules ---
+    "tray": {
+        "icon-size": 22,
+        "spacing": 4
+    },
+
+    "custom/bypass": {
+        "exec": "~/nixos/dotfiles/polybar/scripts/bypass.sh",
+        "interval": 3,
+        "on-click": "~/nixos/dotfiles/polybar/scripts/bypass.sh --toggle",
+        "tooltip": false
+    },
+
+    "pulseaudio": {
+        "format": "<span color='#778899'>VOL </span>{volume}%",
+        "format-muted": "<span color='#707880'>muted</span>",
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "scroll-step": 5,
+        "tooltip": false
+    },
+
+    "sway/language": {
+        "format": "{short}",
+        "on-click": "swaymsg input type:keyboard xkb_switch_layout next",
+        "tooltip": false
+    },
+
+    "memory": {
+        "interval": 2,
+        "format": "<span color='#778899'> </span> {percentage}%",
+        "tooltip": false
+    },
+
+    "cpu": {
+        "interval": 2,
+        "format": "<span color='#778899'> </span> {usage}%",
+        "tooltip": false
+    },
+
+    "clock": {
+        "interval": 1,
+        "format": "{:%H:%M}",
+        "format-alt": "{:%Y-%m-%d %H:%M:%S}",
+        "tooltip-format": "<tt>{calendar}</tt>"
+    }
+}

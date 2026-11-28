@@ -1,6 +1,7 @@
 {
   imports = [
     ./audio.nix
+    ./bash.nix
     ./boot.nix
     ./dwm.nix
     ./env.nix
@@ -8,8 +9,11 @@
     ./hw.nix
     ./net.nix
     ./nh.nix
+    ./printing.nix
     ./steam.nix
     ./stylix.nix
+    ./sudo.nix
+    ./sway.nix
     ./user.nix
     ./xdg.nix
   ];

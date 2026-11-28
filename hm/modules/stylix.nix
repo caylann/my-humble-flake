@@ -25,8 +25,12 @@
           * {
             font-weight: bold;
           }
+
+          line-height: 1.25;
         '';
       };
+      waybar.enable = false;
+      sway.enable = false;
     };
 
     icons = {

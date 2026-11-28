@@ -5,6 +5,7 @@
 
     # Desktop apps
     anki
+    gthumb
     imv
     kdePackages.okular
     libreoffice
@@ -13,7 +14,6 @@
     obsidian
     obs-studio
     qalculate-gtk
-    telegram-desktop
     vesktop
 
     # Software I use
@@ -23,11 +23,14 @@
     rofi-unwrapped
 
     # CLI utils
+    cava
+    colorpanes
     fastfetch
     fzf
     htop
     mediainfo
     ntfs3g
+    pfetch
     playerctl
     ripgrep
     udisks

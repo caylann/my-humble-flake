@@ -18,6 +18,10 @@
       linuxPackages_latest.amneziawg
     ];
 
+    sessionVariables = {
+      GSK_RENDERER = "gl";
+    };
+
     defaultPackages = [ ];
   };
 }

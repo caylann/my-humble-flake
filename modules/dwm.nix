@@ -14,6 +14,7 @@
     autoRepeatDelay = 245;
     autoRepeatInterval = 32;
     dpi = 96;
+    updateDbusEnvironment = true;
 
     excludePackages = [ pkgs.xterm ];
 
@@ -34,6 +35,7 @@
       enable = true;
       package = pkgs.dwm.overrideAttrs (oldAttrs: {
         src = ../dotfiles/dwm;
+        buildInputs = (oldAttrs.buildInputs or [ ]) ++ [ pkgs.yajl ];
       });
     };
 
@@ -44,9 +46,16 @@
         ${pkgs.xset}/bin/xset s off &
         ${pkgs.xset}/bin/xset s noblank &
         ${pkgs.xset}/bin/xset -dpms &
-        ${pkgs.polybarFull}/bin/polybar &
         ${pkgs.picom}/bin/picom -b &
         ${pkgs.dunst}/bin/dunst &
+
+        (
+          while [ ! -S /tmp/dwm.sock ]; do
+            sleep 0.1
+          done
+          sleep 0.5
+          /etc/profiles/per-user/${user}/bin/polybar example >/tmp/polybar.log 2>&1
+        ) &
       '';
     };
 

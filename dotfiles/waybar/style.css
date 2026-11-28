@@ -1,0 +1,95 @@
+* {
+    font-family: "Terminess Nerd Font Propo", monospace;
+    font-weight: bold;
+    font-size: 20px;
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+window#waybar {
+    background-color: #0F1011;
+    color: #F5F5F5;
+}
+
+/* Separator "|" */
+#custom-sep {
+    color: #707880;
+    padding: 0 10px;
+}
+
+/* Outer bar padding */
+#custom-nixos {
+    color: #FFFFFF;
+    padding-left: 12px;
+    padding-right: 4px;
+}
+
+#clock {
+    color: #F5F5F5;
+    padding-right: 12px;
+}
+
+/* Workspaces 1..6 */
+#workspaces button {
+    padding: 0 7px;
+    color: #555555;
+    background: transparent;
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+}
+
+/* Occupied workspaces (unfocused) */
+#workspaces button:not(.empty) {
+    color: #FFFFFF;
+}
+
+/* Empty persistent workspaces */
+#workspaces button.empty {
+    color: #555555;
+}
+
+#workspaces button.visible {
+    color: #778899;
+}
+
+#workspaces button.focused {
+    color: #FFFFFF;
+    border-bottom: 2px solid #FFFFFF;
+}
+
+#workspaces button.urgent {
+    color: #A54242;
+}
+
+#workspaces button:hover {
+    background: transparent;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+/* Sway mode & active window */
+#mode {
+    color: #FFFFFF;
+    padding-left: 8px;
+}
+
+#window {
+    color: #F5F5F5;
+    padding-left: 4px;
+}
+
+/* Right modules */
+#tray {
+    padding-right: 10px;
+}
+
+#custom-bypass {
+    padding-left: 4px;
+}
+
+#language {
+    color: #778899;
+}

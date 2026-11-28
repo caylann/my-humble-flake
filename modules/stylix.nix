@@ -7,6 +7,17 @@
     noto-fonts-color-emoji
   ];
 
+  fonts = {
+    fontconfig = {
+      antialias = true;
+      hinting = {
+        enable = true;
+        style = "slight";
+      };
+      subpixel.rgba = "none";
+    };
+  };
+
   stylix = {
     enable = true;
     polarity = "dark";
@@ -58,7 +69,7 @@
       };
 
       sizes = {
-        applications = 14;
+        applications = 15;
       };
     };
   };
